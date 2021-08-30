@@ -123,6 +123,11 @@ let installClippy = {
     run: "rustup component add clippy"
 }
 
+let installFmt = {
+    name: "Install Clippy",
+    run: "rustup component add rustfmt"
+}
+
 // Install fixed version to avoid upgrading to a breaking version.
 // Should be removed once this has a better solution as described here:
 // https://github.com/enso-org/ide/issues/1772
@@ -469,6 +474,7 @@ let workflow = {
             installRust,
             installPrettier,
             installClippy,
+            installFmt,
             lintMarkdown,
             lintJavaScript,
             lintRust
